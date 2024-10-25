@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz page</title>
+    <link rel="stylesheet" href="/styles/quiz_style.css">
+</head>
+<body>
+    <%if(!completed){%>
+        <div class="quiz-container">
+            <div class="question-number">
+                <span><%- questionNumber %></span>
+            </div>
+            <div class="question">
+                <h2><%- ques %></h2>
+            </div>
+            <form class="quiz-options" action="/quiz/<%- questionNumber %>/answer" method="post">
+                <% for(let i=0; i<answers.length;i++){ %>
+                    <label class="option">
+                        <input type="radio" name="answer" value="<%- answers[i] %>" required>
+                        <span class="option-letter"><%- String.fromCharCode(65+i) %></span>
+                        <%- answers[i] %>
+                    </label>
+                <% } %>
+                
+                <button type="submit" class="start-btn">Next Question</button>
+                
+            </form>
+            
+            
+            
+    
+            
+        </div>
+    <% }%>
+</body>
+</html>

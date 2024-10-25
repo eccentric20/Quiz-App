@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #e1bee7, #ba68c8);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-container{
+    background-color: #f3e5f5;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+
+.question-number{
+    background-color: #7b1fa2;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin: 0 auto 20px;
+}
+
+.question{
+    margin-bottom: 20px;
+}
+
+.question h2{
+    font-size: 18px;
+    color: #6a1b9a;
+}
+
+.quiz-options{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option{
+    background-color: #ba68c8;
+    padding: 15px 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.option:hover{
+    background-color: #ab47bc;
+}
+
+.option input[type="radio"]{
+    display: none;
+}
+
+.option-letter{
+    background-color: white;
+    color: #7b1fa2;
+    font-weight: bold;
+    border-radius: 50%;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.option input[type="radio"]:checked + .option-letter{
+    background-color: #7b1fa2;
+    color: white;
+}
+
+.start-btn{
+    margin-left: 65px;
+    width: 203px;
+    height: 50px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 40px;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #4C6876;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.start-btn:hover{
+    background-color: #3E5963;
+}

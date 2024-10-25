@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Finished</title>
+    <link rel="stylesheet" href="/styles/finish.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz Completed!</h1>
+        
+        <h2>Your Score: <%= score %> out of <%= totalQuestions * 10 %></h2>
+        <form action="/start" method="get">
+            <button type="submit" class="start-btn">Start Again</button>
+        </form>
+    </div>
+</body>
+</html>
